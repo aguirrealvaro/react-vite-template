@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
 
-const App = () => {
-  console.log(import.meta.env.MODE);
-  console.log(import.meta.env.VITE_API_HOST);
+import { FunctionComponent } from "react";
 
-  return <h1>Hello world</h1>;
-};
+console.log(import.meta.env.MODE);
+console.log(import.meta.env.VITE_API_HOST);
+
+const App: FunctionComponent = () => <h1>Hello world</h1>;
 
 export default App;
