@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const PACKAGE = require("./package.json");
 
 type EnvironmentType = "development" | "production";
@@ -13,14 +13,15 @@ export default defineConfig(({ mode }) => {
     throw Error(message);
   }
 
-  console.log(PACKAGE.version);
-
-  //const envVars = loadEnv(mode, process.cwd(), "");
-
   return {
     plugins: [react()],
+    server: {
+      port: 3000,
+    },
     define: {
       "process.env": {
+        ...process.env,
+        ...loadEnv(mode, process.cwd(), ""),
         APP_VERSION: PACKAGE.version,
       },
     },
