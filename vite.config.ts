@@ -13,8 +13,8 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
-    define: {
+    /* define: {
       "process.env": {},
-    },
+    }, */
   };
 });
