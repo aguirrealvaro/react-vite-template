@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-
 import { FunctionComponent } from "react";
 
 console.log(import.meta.env.MODE);
