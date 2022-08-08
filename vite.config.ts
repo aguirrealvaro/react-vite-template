@@ -11,7 +11,12 @@ export default defineConfig(({ mode }) => {
     throw Error(message);
   }
 
+  //const envVars = loadEnv(mode, process.cwd(), "");
+
   return {
     plugins: [react()],
+    /* define: {
+      "process.env": {},
+    }, */
   };
 });
