@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev-localdb": "VITE_API_HOST=local_api_host vite --port 3000",
+    "dev-localdb": "set VITE_API_HOST=local_api_host && vite --port 3000",
     "dev": "vite --port 3000",
     "build": "tsc && vite build --mode production",
     "preview": "vite preview",
