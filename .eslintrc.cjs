@@ -16,6 +16,7 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "warn",
     "react-hooks/rules-of-hooks": "warn",
     "react-hooks/exhaustive-deps": "error",
+    "no-duplicate-imports": "error",
   },
   env: {
     node: true,
