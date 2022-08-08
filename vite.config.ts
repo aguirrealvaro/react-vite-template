@@ -3,19 +3,19 @@ import react from "@vitejs/plugin-react";
 
 const validEnvs = ["development", "production"];
 
-// https://vitejs.dev/config/
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({ mode }) => {
   if (!validEnvs.includes[mode]) {
     const message = `Unsupported mode: "${mode}"`;
     throw Error(message);
   }
 
-  const env = loadEnv(mode, process.cwd(), "");
+  const envVars = loadEnv(mode, process.cwd(), "");
 
   return {
     plugins: [react()],
+    envPrefix: "VITE_",
     define: {
-      "process.env": env,
+      "process.env": envVars,
     },
   };
 });
