@@ -4,11 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 3000",
-    "build": "tsc && vite build",
+    "dev": "vite --port 3000 --mode development",
+    "build-staging": "vite build --mode staging",
+    "build": "tsc && vite build --mode production",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint src"
   },
   "dependencies": {
     "prettier": "^2.7.1",
