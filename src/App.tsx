@@ -1,8 +1,8 @@
 const App = () => {
   console.log(import.meta.env.MODE);
-  console.log(import.meta.env.API_HOST);
+  console.log(import.meta.env.VITE_API_HOST);
 
-  console.log(process.env.HOLA);
+  console.log(process.env.VITE_HOLA);
 
   return <h1>Hello world</h1>;
 };
