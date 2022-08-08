@@ -20,8 +20,8 @@ export default defineConfig(({ mode }) => {
     },
     define: {
       "process.env": {
-        ...process.env,
         ...loadEnv(mode, process.cwd(), ""),
+        MODE: mode,
         APP_VERSION: PACKAGE.version,
       },
     },

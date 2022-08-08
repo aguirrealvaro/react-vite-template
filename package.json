@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev-localdb": "set VITE_API_HOST=local_api_host && vite",
+    "dev-localdb": "set API_HOST=local_api_host && vite",
     "dev": "vite",
     "build": "tsc && vite build --mode production",
     "preview": "vite preview",
