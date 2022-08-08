@@ -1,5 +1,11 @@
+import { useEffect, useState } from "react";
+
 const App = () => {
-  console.log("asd");
+  const [asd] = useState(false);
+  useEffect(() => {
+    console.log(asd);
+  }, []);
+
   return <h1>Hello world</h1>;
 };
 
