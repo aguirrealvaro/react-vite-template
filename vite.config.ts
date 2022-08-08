@@ -1,7 +1,9 @@
-import { defineConfig, loadEnv } from "vite";
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-const validEnvs = ["development", "production"];
+type EnvironmentType = "development" | "production";
+
+const validEnvs: EnvironmentType[] = ["development", "production"];
 
 export default defineConfig(({ mode }) => {
   if (!validEnvs.includes[mode]) {
@@ -9,13 +11,10 @@ export default defineConfig(({ mode }) => {
     throw Error(message);
   }
 
-  const envVars = loadEnv(mode, process.cwd(), "");
-
   return {
     plugins: [react()],
-    envPrefix: "VITE_",
     define: {
-      "process.env": envVars,
+      "process.env": {},
     },
   };
 });
