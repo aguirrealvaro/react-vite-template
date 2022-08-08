@@ -6,11 +6,7 @@ type EnvironmentType = "development" | "production";
 const validEnvs: EnvironmentType[] = ["development", "production"];
 
 export default defineConfig(({ mode }) => {
-  console.log("***");
-  console.log(mode);
-  console.log("***");
-
-  if (!validEnvs.includes[mode]) {
+  if (!validEnvs.includes(mode as EnvironmentType)) {
     const message = `Unsupported mode: "${mode}"`;
     throw Error(message);
   }
