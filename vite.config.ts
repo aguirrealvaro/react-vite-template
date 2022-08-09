@@ -3,12 +3,10 @@ import react from "@vitejs/plugin-react";
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const PACKAGE = require("./package.json");
 
-type EnvironmentType = "development" | "production";
-
-const validEnvs: EnvironmentType[] = ["development", "production"];
+const validEnvs = ["development", "production"];
 
 export default defineConfig(({ mode }) => {
-  if (!validEnvs.includes(mode as EnvironmentType)) {
+  if (!validEnvs.includes(mode)) {
     const message = `Unsupported mode: "${mode}"`;
     throw Error(message);
   }
