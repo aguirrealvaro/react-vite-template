@@ -9,7 +9,7 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   rules: {
-    "no-var": "off",
+    "no-var": "error",
     "no-console": "warn",
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-var-requires": "warn",
