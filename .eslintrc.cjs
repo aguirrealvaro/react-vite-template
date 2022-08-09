@@ -6,6 +6,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
   ],
   rules: {
     "no-var": "off",
@@ -17,6 +18,7 @@ module.exports = {
     "react-hooks/rules-of-hooks": "warn",
     "react-hooks/exhaustive-deps": "error",
     "no-duplicate-imports": "error",
+    "prettier/prettier": "error",
   },
   env: {
     node: true,
