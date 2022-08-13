@@ -19,6 +19,8 @@ module.exports = {
     "react-hooks/exhaustive-deps": "error",
     "prettier/prettier": "error",
     "import/no-duplicates": "error",
+    "prefer-const": "warn",
+    "prefer-arrow-callback": "warn",
     "import/no-unresolved": "off",
     "import/order": [
       "error",
