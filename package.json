@@ -39,11 +39,5 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "lint-staged": {
-    "src/**/*.{ts,tsx,js,jsx}": [
-      "npm run lint",
-      "tsc-files --noEmit"
-    ]
   }
 }
