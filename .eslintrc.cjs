@@ -10,6 +10,7 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   rules: {
+    "react-refresh/only-export-components": "warn",
     "no-var": "error",
     "no-console": "warn",
     "@typescript-eslint/no-unused-vars": "warn",
