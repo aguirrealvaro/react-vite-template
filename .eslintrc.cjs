@@ -1,7 +1,8 @@
 module.exports = {
-  root: true,
+  env: { browser: true, es2020: true },
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "react-hooks", "import"],
+  parserOptions: { ecmaVersion: "latest", sourceType: "module" },
+  plugins: ["react-refresh", "@typescript-eslint", "react-hooks", "import"],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -46,8 +47,5 @@ module.exports = {
         },
       },
     ],
-  },
-  env: {
-    node: true,
   },
 };
