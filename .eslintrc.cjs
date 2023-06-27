@@ -8,6 +8,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended",
   ],
   rules: {
     "react-refresh/only-export-components": "warn",
