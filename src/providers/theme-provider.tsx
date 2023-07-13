@@ -29,8 +29,7 @@ export const ThemeProvider: FunctionComponent<ThemeProviderProps> = ({ children 
   const toggleThemeMode = () => {
     const currentTheme = getCurrentThemeMode();
     const newTheme = currentTheme === "light" ? "dark" : "light";
-    document.documentElement.classList.remove(currentTheme);
-    document.documentElement.classList.add(newTheme);
+    document.documentElement.classList.replace(currentTheme, newTheme);
     document.documentElement.style.colorScheme = newTheme;
     localStorage.setItem(THEME_MODE_LOCAL_STORAGE_KEY, newTheme);
   };
