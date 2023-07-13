@@ -40,4 +40,8 @@
   ::after {
     @apply border-border-primary;
   }
+
+  body {
+    @apply bg-bg-primary text-text-primary;
+  }
 }

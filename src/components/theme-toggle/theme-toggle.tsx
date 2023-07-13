@@ -6,7 +6,7 @@ const ThemeToggle: FunctionComponent = () => {
 
   return (
     <button
-      className="rounded bg-blue-500 p-2 text-white dark:bg-red-500"
+      className="rounded bg-blue-500 p-2 text-white dark:text-black"
       onClick={toggleThemeMode}
     >
       Theme toggle

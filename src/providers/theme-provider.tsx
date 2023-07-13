@@ -4,17 +4,17 @@ const THEME_MODE_LOCAL_STORAGE_KEY = "theme";
 
 type ThemeModeType = "light" | "dark";
 
-type SessionProviderProps = {
+type ThemeProviderProps = {
   children: ReactNode;
 };
 
-type SessionContextValue = {
+type ThemeContextValue = {
   toggleThemeMode: () => void;
 };
 
-export const ThemeContext = createContext<SessionContextValue>({} as SessionContextValue);
+export const ThemeContext = createContext<ThemeContextValue>({} as ThemeContextValue);
 
-export const ThemeProvider: FunctionComponent<SessionProviderProps> = ({ children }) => {
+export const ThemeProvider: FunctionComponent<ThemeProviderProps> = ({ children }) => {
   const getCurrentThemeMode = () => {
     return (localStorage.getItem(THEME_MODE_LOCAL_STORAGE_KEY) || "light") as ThemeModeType;
   };
