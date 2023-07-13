@@ -15,8 +15,10 @@
     "pre-commit": "lint-staged --no-stash"
   },
   "dependencies": {
+    "clsx": "^1.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^1.13.2"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",
