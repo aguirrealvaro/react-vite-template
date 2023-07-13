@@ -2,6 +2,10 @@ import { createContext, FunctionComponent, ReactNode, useLayoutEffect } from "re
 
 const THEME_MODE_LOCAL_STORAGE_KEY = "theme";
 
+const getCurrentThemeMode = () => {
+  return (localStorage.getItem(THEME_MODE_LOCAL_STORAGE_KEY) || "light") as ThemeModeType;
+};
+
 type ThemeModeType = "light" | "dark";
 
 type ThemeProviderProps = {
@@ -15,10 +19,6 @@ type ThemeContextValue = {
 export const ThemeContext = createContext<ThemeContextValue>({} as ThemeContextValue);
 
 export const ThemeProvider: FunctionComponent<ThemeProviderProps> = ({ children }) => {
-  const getCurrentThemeMode = () => {
-    return (localStorage.getItem(THEME_MODE_LOCAL_STORAGE_KEY) || "light") as ThemeModeType;
-  };
-
   useLayoutEffect(() => {
     const defaultTheme = getCurrentThemeMode();
     document.documentElement.classList.add(defaultTheme);
